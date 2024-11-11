@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Phone Hunter</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center m-2">Phone Hunter</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="d-flex">
+            <input class="form-control w-50" type="text" name="" id="search-field" placeholder="Search">
+            <button onclick="searchPhone()" class="btn btn-primary ms-3">Search</button>
+        </div>
+        <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4 p-5">
+            <!-- <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h5 class="">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+           
+           -->
+
+
+        </div>
+
+        <!-- Loader -->
+        <section id="loader" class="d-none">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        <div id="feedback" class="p-3 d-none">
+            <h4 class="text-danger text-center">No Phones. Search Valid phone</h4>
+        </div>
+
+        <section id="show-more" class="text-center d-none">
+            <button onclick="showMoreBtn()" class="btn btn-primary">See More</button>
+        </section>
+
+        <!-- Modal -->
+        <!-- Button trigger modal -->
+        <!-- <button onclick="loadPhoneDetails()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showDetails">
+            Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="showDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modal-title"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 >Brand: <span id="brand"></span></h4>
+                        <p>Release Date: <span id="releaseDate"></span></p>
+                        <p>Display Size: <span id="displaySize"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/phone-hunter.js"></script>
+</body>
+
+</html>
